@@ -1,4 +1,4 @@
-<p> <a href="README_CN.md"> English <a/> |  中文 </p>
+<p> <a href="README.md"> English <a/> |  中文 </p>
 
 # solana pump.fun 代币兑换 API
 
