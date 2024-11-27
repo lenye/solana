@@ -1,3 +1,5 @@
+<p> English | <a href="README_CN.md"> 中文 <a/></p>
+
 # solana pump.fun token swap api
 
 get real-time prices for tokens, buy and sell tokens, use the following API endpoints:
