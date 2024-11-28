@@ -14,4 +14,10 @@ Swagger 用户界面
 
 https://swap.nanhook.com/swagger/
 
+### Associated Token Account
+
+https://solana.com/docs/core/tokens#associated-token-account
+
+关联代币账户作为特定代币铸造账户和所有者的“默认”代币账户。
+
 这不是官方的 pump.fun API。使用我们的 API 可以帮助您创建自己的 pump.fun 交易机器人和工具。您可以免费使用该 API，每个端点都有速率限制。
