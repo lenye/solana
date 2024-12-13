@@ -40,7 +40,7 @@ curl -X 'POST' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
-  "private_key": "private_key",
+  "private_key": "wallet private key",
   "mint": "Di9zMoWNCppeMiNqVXoNYvWbisVYsdkkwvrSkreYpump",
   "amount": 1000000000,
   "slippage": 6
@@ -70,7 +70,7 @@ curl -X 'POST' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
-  "private_key": "private_key",
+  "private_key": "wallet private key",
   "mint": "Di9zMoWNCppeMiNqVXoNYvWbisVYsdkkwvrSkreYpump",
   "amount": 10412144167202,
   "slippage": 6
