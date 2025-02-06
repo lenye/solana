@@ -8,7 +8,7 @@
 * 购买：https://swap.nanhook.com/pumpfun/buy
 * 出售：https://swap.nanhook.com/pumpfun/sell
 
-## 价格
+### 价格
 
 http 请求
 
@@ -26,7 +26,7 @@ http 响应
 }
 ```
 
-## 购买
+### 购买
 
 amount: 1000000000 lamports => 1 SOL
 
@@ -56,7 +56,7 @@ http 响应
 }
 ```
 
-## 出售
+### 出售
 
 amount: 10412144167202 => 10412144.167202 mint
 
@@ -92,7 +92,7 @@ https://solana.com/docs/core/tokens#associated-token-account
 
 关联代币账户作为特定代币铸造账户和所有者的“默认”代币账户。
 
-# Swagger 用户界面
+### Swagger 用户界面
 
 https://swap.nanhook.com/swagger/
 

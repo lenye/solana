@@ -8,7 +8,7 @@ Get the real-time price of then token, token trading, use the following API endp
 * buy: https://swap.nanhook.com/pumpfun/buy
 * sell: https://swap.nanhook.com/pumpfun/sell
 
-## Price
+### Price
 
 http request
 
@@ -26,7 +26,7 @@ http response
 }
 ```
 
-## Buy
+### Buy
 
 amount: 1000000000 lamports => 1 SOL
 
@@ -56,7 +56,7 @@ http response
 }
 ```
 
-## Sell
+### Sell
 
 amount: 10412144167202 => 10412144.167202 mint
 
@@ -92,7 +92,7 @@ https://solana.com/docs/core/tokens#associated-token-account
 
 Associated Token Account as the "default" token account for a specific mint and owner.
 
-# Swagger UI
+### Swagger UI
 
 https://swap.nanhook.com/swagger/
 
