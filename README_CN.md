@@ -16,10 +16,8 @@
 
 **JSON 数据格式**
 
-```text
-sol_amount   单位为 lamports
-price        单位为 SOL
-```
+* sol_amount 单位为 lamports
+* price 单位为 SOL
 
 #### 新创建代币
 
