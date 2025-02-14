@@ -21,7 +21,7 @@ sol_amount   单位为 lamports
 price        单位为 SOL
 ```
 
-#### 新创建代币, 买入代币
+#### 新创建代币
 
 ```json
 {
@@ -40,22 +40,6 @@ price        单位为 SOL
                 "symbol": "beni",
                 "uri": "https://ipfs.io/ipfs/bafkreigegxjfgfb25vx64awsylnxc2rckbt4c766pg2ubpirj24otbcqjy"
             }
-        },
-        {
-            "action": "buy",
-            "accounts": {
-                "mint": "Kz2MfJf6ZNChZLK7Wofzma5BsnnebnPPZwN775sirCE",
-                "bonding_curve": "31PV2wqSYVBp9NtjRQRnpUjJAuaBqbwY9oDqBtkj4ciV",
-                "associated_bonding_curve": "DxFdVu8H4VuU9J3D2HKBShxt76bN9ns6BwqGGHuoXz1j",
-                "associated_user": "3mtehqFoc7EFtwEJH2XFaui21jQmKEPiRKkns7nFqB69",
-                "user": "8wZiLEMF7sV6q4JbFyFNTyaBDPm5LXToKiE1n6moqDV5"
-            },
-            "data": {
-                "sol_amount": 5108912872,
-                "token_amount": 156138799597360,
-                "timestamp": 1727058754,
-                "price": "0.0000000383"
-            }
         }
     ],
     "tx_hash": "2KH3bWHYsvzz8AJjkyMugGWgaAjGRVjjnfvGixV8PS5FbR7LobTWkx7SaVgpiDbS4x7GT5M7VxsAQjkXL2WjKSvq",
@@ -64,7 +48,7 @@ price        单位为 SOL
 }
 ```
 
-### 买入代币
+#### 买入代币
 
 ```json
 {
@@ -93,7 +77,7 @@ price        单位为 SOL
 }
 ```
 
-### 卖出代币
+#### 卖出代币
 
 ```json
 {
