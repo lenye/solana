@@ -1,6 +1,6 @@
 <p> English | <a href="README_CN.md"> 中文 <a/></p>
 
-### Proposal: Monitor Solana pump.fun Platform Real-time Transaction Activity and Push Transaction Information in Real-time.
+### Proposal: Monitor Solana blockchain pump.fun real-time transaction activity with Webhook-based real-time transaction information push.
 
 <details>
 

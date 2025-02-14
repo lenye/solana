@@ -1,6 +1,6 @@
 <p> <a href="README.md"> English <a/> |  中文 </p>
 
-### 提案：监控 Solana 区块链 pump.fun 平台实时交易动向，实时推送交易信息。
+### 提案：监控 Solana 区块链 pump.fun 实时交易动向，Webhook 实时推送交易信息。
 
 <details>
 
