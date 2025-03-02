@@ -101,3 +101,7 @@ https://solana.com/docs/core/tokens#associated-token-account
 https://swap.nanhook.com/swagger/
 
 这不是官方的 pump.fun API。使用我们的 API 可以帮助您创建自己的 pump.fun 交易机器人和工具。您可以免费使用该 API，每个端点都有速率限制。
+
+# 免责声明
+
+本项目仅供学习和研究之用，加密币及交易存在风险，使用此软件的风险由您自行承担，我们对使用该软件时产生的任何损失概不负责。

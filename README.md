@@ -103,3 +103,8 @@ https://swap.nanhook.com/swagger/
 This is not the official pump.fun API.
 Using our API can help you create your own pump.fun trading robots and tools.
 You can use the API for free, with rate limits for each endpoint.
+
+# Disclaimer
+
+This project is for learning and research purposes only. Cryptocurrencies and trading involve risk, and you assume all
+risks associated with using this software. We are not responsible for any losses incurred while using this software.
