@@ -1,100 +1,113 @@
 <p> English | <a href="README_CN.md"> 中文 <a/></p>
 
-### Monitor Solana blockchain pump.fun real-time transaction activity with Webhook-based real-time transaction information push.
+# pump.fun token price api
 
-https://github.com/lenye/pumpfun_tracker
+Get pump.fun real-time price from the Solana blockchain.
 
-# solana pump.fun token swap api
+## 支持的操作系统
 
-Get the real-time price of then token, token trading, use the following API endpoints:
+* Windows
+* Linux
+* macOS
+* FreeBSD
 
-* price: https://swap.nanhook.com/pumpfun/price
-* buy: https://swap.nanhook.com/pumpfun/buy
-* sell: https://swap.nanhook.com/pumpfun/sell
+## 上手指南
+
+```shell
+C:\>pumpfun_price.exe -h
+Get pump.fun real-time price from the Solana blockchain
+
+Usage:
+  pumpfun_price [command]
+
+Available Commands:
+  api         Get the real-time price of then pump.fun token
+  help        Help about any command
+  rpc_version rpc node solana version
+
+Flags:
+  -h, --help              help for pumpfun_price
+      --logfile           writing to a log file
+  -l, --loglevel string   log level: debug, info, warn, error (default "error")
+      --proxy string      proxy server, format: http://username:password@proxy_server_domain:port or socks5://username:password@proxy_server_ip:port
+  -v, --version           version for pumpfun_price
+
+Use "pumpfun_price [command] --help" for more information about a command.
+```
+
+### 安装`pumpfun_price`
+
+`pumpfun_price`下载 [最新版本](https://github.com/lenye/solana/releases/tag/pumpfun_price_v25.7.0)
+
+#### windows 操作系统
+
+1. 解压下载文件`pumpfun_price_v25.7.0_windows_x86_64.zip`；
+2. 运行`pumpfun_price.exe api`，开始 API 服务；
+
+#### 完成
+
+如果你顺利完成了以上步骤，那么恭喜你，属于你的`pumpfun_prices`搭建成功。
+
+## 调用 API 获取 pump.fun token Price
+
+* HTTP 方法: GET
+* Endpoint: http://localhost:39270/pumpfun/price
+* 数据格式: 请求和响应数据编码均为 UTF-8
+
+### 请求参数
+
+URL Query
+
+| 参数名    | 类型     | 必填 | 描述             |
+|:-------|:-------|:---|:---------------|
+| `mint` | string | 是  | pump.fun token |
+
+mint: The contract address of the token you want to trade (this is the text after the '/' in the pump.fun url for the
+token.)
+
+### 响应数据
+
+API 服务器返回 `HTTP 200` 状态码, 表示查询成功。
+
+| 字段名   | 类型     | 描述          |
+|:------|:-------|:------------|
+| `SOL` | string | token price |
+
+API 服务器返回 `HTTP 4xx, 5xx` 状态码, 表示查询失败。
+
+| 字段名       | 类型     | 描述   |
+|:----------|:-------|:-----|
+| `code`    | int    | 结果代码 |
+| `message` | string | 结果描述 |
 
 ### Price
 
 http request
 
-```shell
-curl -X 'GET' \
-  'https://swap.nanhook.com/pumpfun/price?mint=Di9zMoWNCppeMiNqVXoNYvWbisVYsdkkwvrSkreYpump' \
-  -H 'accept: application/json'
+```http
+GET /pumpfun/price?token=Di9zMoWNCppeMiNqVXoNYvWbisVYsdkkwvrSkreYpump'
 ```
 
-http response
+api server response
 
-```json
+```http
+content-type: application/json; charset=utf-8
+ 
 {
     "SOL": "0.0000000282"
 }
 ```
 
-### Buy
-
-amount: 1000000000 lamports => 1 SOL
-
-slippage: 6 => 6%
-
-http request
+#### curl
 
 ```shell
-curl -X 'POST' \
-  'https://swap.nanhook.com/pumpfun/buy' \
-  -H 'accept: application/json' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "private_key": "wallet private key",
-  "mint": "Di9zMoWNCppeMiNqVXoNYvWbisVYsdkkwvrSkreYpump",
-  "amount": 1000000000,
-  "slippage": 6
-}'
+curl -X 'GET' \
+  'http://localhost:39270/pumpfun/price?mint=Di9zMoWNCppeMiNqVXoNYvWbisVYsdkkwvrSkreYpump'
 ```
 
-http response
+### Monitor Solana blockchain pump.fun real-time transaction activity with Webhook-based real-time transaction information push.
 
-```json
-{
-    "tx_hash": "4KyWfG9w4kPjKWP6KBBTgcqCtaKBzgqS1WvSSF5KvfmJPN5Kh9WsaZrX7kigrHe7v8xcMyujdZCEwRdmigyL5WJ9",
-    "associated_token_account": "795dYUac4c7J7uQZ1TdTfZYsTx2Xhutpbsy21on9oWWi"
-}
-```
-
-### Sell
-
-amount: 10412144167202 => 10412144.167202 mint
-
-slippage: 6 => 6%
-
-http request
-
-```shell
-curl -X 'POST' \
-  'https://swap.nanhook.com/pumpfun/sell' \
-  -H 'accept: application/json' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "private_key": "wallet private key",
-  "mint": "Di9zMoWNCppeMiNqVXoNYvWbisVYsdkkwvrSkreYpump",
-  "amount": 10412144167202,
-  "slippage": 6
-}'
-```
-
-http response
-
-```json
-{
-    "tx_hash": "67NrDWQ87tc4Bgjox7RN4QnjyVqEWzv9ziQq2nFeELdGCVKe6oaFvASCSH112kwgXUxqRNANeb4RhAQP5fG4mtDy",
-    "associated_token_account": "J1jvePNYHbe5QHAQoaohTVWfojHo1Qiqac73uUwvd3fo"
-}
-```
-
-### Associated Token Account
-
-https://solana.com/docs/core/tokens#associated-token-account
-
-Associated Token Account as the "default" token account for a specific mint and owner.
+https://github.com/lenye/pumpfun_tracker
 
 ### Swagger UI
 
